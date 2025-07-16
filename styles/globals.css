@@ -1,14 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------------------------------ */
+/* Rename your CSS variables to match tailwind.config.js */
+/* ------------------------------------------------ */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Backgrounds and Surfaces */
+  --color-background: #f4f9fc;  /* Light page background */
+  --color-surface:    #ffffff;  /* Card, forms */
+
+  /* Primary Brand Colors */
+  --color-primary:       #2A8C99;
+  --color-primary-hover: #1F6E77;
+
+  /* Accent Colors */
+  --color-accent-blue:   #62B8C7;
+  --color-accent-orange: #B97847;
+
+  /* State Colors */
+  --color-success: #34D399;
+  --color-error:   #F87171;
+
+  /* Text Colors */
+  --color-text:  #334155;
+  --color-muted: #64748b;
+
+  /* Typography */
+  --font-base:        'Segoe UI', sans-serif;
+  --font-size-xs:     0.75rem;
+  --font-size-sm:     0.85rem;
+  --font-size-md:       1rem;
+  --font-size-lg:     1.5rem;
+  --font-size-xl:       2rem;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --color-background: #0a0a0a;
+    --color-text:       #ededed;
   }
 }
+
+/* ------------------------------------------------ */
+/* The rest of your global resets, remains unchanged */
+/* ------------------------------------------------ */
 
 html,
 body {
@@ -17,17 +54,17 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-text);
+  background: var(--color-background);
+  font-family: var(--font-base);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 a {
